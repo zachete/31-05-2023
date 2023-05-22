@@ -2,7 +2,8 @@
   "name": "happy-birthday",
   "version": "1.0.0",
   "description": "",
-  "main": "docs/index.js",
+  "source": "src/index.html",
+  "distDir": "docs",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "acorn": "^8.8.2",
