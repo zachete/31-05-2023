@@ -6,8 +6,8 @@
   "distDir": "docs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx parcel build src/index.html --dist-dir ./docs/ --public-url https://zachete.github.io/31-05-2023/",
-    "start": "npx parcel"
+    "build": "rm -rf ./docs && npx parcel build src/index.html --dist-dir ./docs/ --public-url https://zachete.github.io/31-05-2023/",
+    "start": "npx parcel --dist-dir ./docs/"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.2",

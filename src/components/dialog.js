@@ -55,7 +55,15 @@ const Text = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
 `;
 
-const Phrase = styled.p``;
+const Phrase = styled.p`
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+`;
 
 const Button = styled.button`
   margin: 20px auto;

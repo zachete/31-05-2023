@@ -2503,13 +2503,13 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"jC2qd":[function(require,module,exports) {
+},{}],"aleVA":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "a6a7d594616ea15e";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -27307,7 +27307,7 @@ $RefreshReg$(_c3, "MashaContainer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","./global-styles":"3Cp1c","./dialog":"eVb4n","../scenary":"hYyDX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./masha":"9R4UB","@react-spring/web":"4oFvG","../bg.jpeg":"i87b7","./credits":"lf8Qq"}],"1U3k6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@react-spring/web":"4oFvG","./global-styles":"3Cp1c","./dialog":"eVb4n","./masha":"9R4UB","./credits":"lf8Qq","../scenary":"hYyDX","../bg.jpeg":"d4eHK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1U3k6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ServerStyleSheet", ()=>Je);
@@ -29200,558 +29200,6 @@ module.exports = require("d2aa0ba3605b66a5");
     exports.isValidElementType = isValidElementType;
     exports.typeOf = typeOf;
 })();
-
-},{}],"3Cp1c":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "GlobalStyles", ()=>GlobalStyles);
-var _styledComponents = require("styled-components");
-const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
-    html {
-        min-height: 100%;
-    }
-
-    body {
-        margin: 0;
-        height: 100%;
-        font-size: 16px;
-        line-height: 1.4;
-        font-family: Arial, sans-serif;
-        background: #000;
-    }
-
-    textarea {
-        font-family: Arial, sans-serif;
-    }
-`;
-
-},{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eVb4n":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ea8b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ea8b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Dialog", ()=>Dialog);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-var _answer = require("./answer");
-const Dialog = ({ text , answer , turnPage , buttonLabel , buttonAction , onEnd  })=>{
-    const onSubmit = (value)=>{
-        if (value === answer) turnPage();
-    };
-    const onClick = ()=>{
-        if (buttonAction) {
-            switch(buttonAction){
-                case "END":
-                    onEnd();
-            }
-            return;
-        }
-        turnPage();
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Container, {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Text, {
-                children: text.map((item, key)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Phrase, {
-                        children: item
-                    }, key, false, {
-                        fileName: "src/components/dialog.js",
-                        lineNumber: 33,
-                        columnNumber: 11
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/components/dialog.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            answer ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _answer.Answer), {
-                label: "Отправить",
-                onSubmit: onSubmit
-            }, void 0, false, {
-                fileName: "src/components/dialog.js",
-                lineNumber: 38,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Button, {
-                onClick: onClick,
-                children: buttonLabel
-            }, void 0, false, {
-                fileName: "src/components/dialog.js",
-                lineNumber: 40,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/dialog.js",
-        lineNumber: 30,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Dialog;
-const Container = (0, _styledComponentsDefault.default).div``;
-_c1 = Container;
-const Text = (0, _styledComponentsDefault.default).div`
-  box-sizing: border-box;
-  padding: 20px;
-  margin-top: -3px;
-  border-radius: 4px;
-  border-top: 4px solid #000;
-  border-bottom: 4px solid #000;
-  background-color: rgba(0, 0, 0, 0.4);
-`;
-_c2 = Text;
-const Phrase = (0, _styledComponentsDefault.default).p``;
-_c3 = Phrase;
-const Button = (0, _styledComponentsDefault.default).button`
-  margin: 20px auto;
-  display: block;
-  padding: 10px 16px;
-  color: #fff;
-  background: #772cbf;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  border-radius: 4px;
-
-  &:active {
-    background: #551e89;
-  }
-`;
-_c4 = Button;
-var _c, _c1, _c2, _c3, _c4;
-$RefreshReg$(_c, "Dialog");
-$RefreshReg$(_c1, "Container");
-$RefreshReg$(_c2, "Text");
-$RefreshReg$(_c3, "Phrase");
-$RefreshReg$(_c4, "Button");
-
-  $parcel$ReactRefreshHelpers$ea8b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","styled-components":"1U3k6","./answer":"cHXse","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cHXse":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$445c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$445c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Answer", ()=>Answer);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-var _s = $RefreshSig$();
-const Answer = ({ label , onSubmit  })=>{
-    _s();
-    const [answer, setAnswer] = (0, _react.useState)();
-    const onChange = (e)=>{
-        setAnswer(e.target.value);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Container, {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Text, {
-                onChange: onChange,
-                value: answer
-            }, void 0, false, {
-                fileName: "src/components/answer.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Button, {
-                onClick: ()=>{
-                    onSubmit(answer);
-                },
-                children: label
-            }, void 0, false, {
-                fileName: "src/components/answer.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/answer.js",
-        lineNumber: 11,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Answer, "AjR2UpthymMS6uPGPahP19MYw38=");
-_c = Answer;
-const Container = (0, _styledComponentsDefault.default).div`
-  text-align: right;
-  margin: 0 auto;
-  width: 300px;
-`;
-_c1 = Container;
-const Text = (0, _styledComponentsDefault.default).textarea`
-  display: block;
-  resize: none;
-  box-sizing: border-box;
-  width: 100%;
-  height: 60px;
-  padding: 8px;
-  font-size: 16px;
-  background: none;
-  border: 4px solid #772cbf;
-  border-radius: 4px;
-  outline: none;
-  background-color: rgba(0, 0, 0, 0.65);
-  color: #fff;
-`;
-_c2 = Text;
-const Button = (0, _styledComponentsDefault.default).button`
-  margin: 20px auto;
-  display: inline-block;
-  padding: 10px 16px;
-  color: #fff;
-  background: #772cbf;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  border-radius: 4px;
-
-  &:active {
-    background: #551e89;
-  }
-`;
-_c3 = Button;
-var _c, _c1, _c2, _c3;
-$RefreshReg$(_c, "Answer");
-$RefreshReg$(_c1, "Container");
-$RefreshReg$(_c2, "Text");
-$RefreshReg$(_c3, "Button");
-
-  $parcel$ReactRefreshHelpers$445c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("9bcd37ccd6b11c6");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + " %exports% " + key);
-    }
-}
-
-},{"9bcd37ccd6b11c6":"786KC"}],"hYyDX":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "scenary", ()=>scenary);
-const scenary = {
-    pages: [
-        {
-            text: [
-                "- Мммммурмяу...то есть привет Юля, а точнее с днем рождения!",
-                "- Меня зовут Мария. В это трудно будет поверить, но я связываюсь с тобой из параллельной кошачьей вселенной. Эволюция пошла у нас иным путем и вид кошачьих является высшей ступенью развития. У нас есть технологии, позволяющие читать другие вселенные и даже будущее."
-            ],
-            buttonLabel: "Далее"
-        },
-        {
-            text: [
-                "- Да, понимаю твое удивление. Для нас просмотр параллельных вселенных что-то вроде реалити-шоу.",
-                "- Я пришла помочь тебе, потому что твой вредный (хоть и очень красивый) муж не хочет показывать тебе где лежит твой подарок."
-            ],
-            buttonLabel: "Далее"
-        },
-        {
-            text: [
-                "- Почему я помогаю тебе? Потому что из всех моих хозяек, ты самая добрая, отзывчивая и любящая.",
-                "- Если ты готова, нажми на кнопку и мы начнем."
-            ],
-            buttonLabel: "Начать"
-        },
-        {
-            text: [
-                "- Прежде, чем мы приступим, тебе нужно пройти протокол аутентификации. Так я пойму, что нашла твою целевую версию.",
-                "- Введи ниже час своего рождения:"
-            ],
-            answer: "13"
-        },
-        {
-            text: [
-                "- Отлично! Теперь введи пожалуйста день недели, когда ты родилась (маленькими буквами): "
-            ],
-            answer: "суббота"
-        },
-        {
-            text: [
-                "- Супер, теперь я уверена что ты - это та версия, которую я искала. Далее мне нужно настроить визуализатор альтернативных реальностей - так я смогу понять где ты находишься.",
-                "- Сейчас я запущу консоль эмуляции. Для калибровки местоположения она будет задавать вопросы, на которые тебе нужно будет ответить. Все вопросы будут касаться количественной характеристики объектов вокруг тебя. Т.е. ответом будет являться количество предметов - цифра.",
-                "- Ну что, ты готова?"
-            ],
-            buttonLabel: "Да"
-        },
-        {
-            text: [
-                "- И так, первый вопрос: ",
-                "Жарким днем и жаркой ночью",
-                "Нас спасают они очень"
-            ],
-            answer: "22"
-        },
-        {
-            text: [
-                "- Прекрасно! Следующий вопрос:",
-                "В подоконник упираются,",
-                "Белой краской покрываются"
-            ],
-            answer: "31"
-        },
-        {
-            text: [
-                "- У тебя получилось! У меня удалось подключиться. Дай немного времени, я изучу твое окружение...",
-                "- Ага, попался! Подарок находится на нижней полке твоего белого шкафа. Иди скорее забирай \uD83D\uDE3B.",
-                "- Ну что, нашла?"
-            ],
-            buttonLabel: "Да, спасибо!"
-        },
-        {
-            text: [
-                "- Рада была помочь\uD83D\uDC31 С днем рождения тебя Юля! Желаю тебе самых позитивных эмоций, самого крепкого здоровья, никогда не сдаваться и идти только вперед, чтобы все мечты воплощались в реальность!",
-                "- Ну ладно, мне пора. Мой Ромео зовет меня смотреть телешоу. Пока."
-            ],
-            buttonLabel: "Пока",
-            buttonAction: "END"
-        }
-    ]
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9R4UB":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6d54 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6d54.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Masha", ()=>Masha);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _mashaPng = require("../masha.png");
-var _mashaPngDefault = parcelHelpers.interopDefault(_mashaPng);
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-const Masha = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Container, {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _mashaPngDefault.default),
-                width: 200
-            }, void 0, false, {
-                fileName: "src/components/masha.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Label, {
-                children: "Мария"
-            }, void 0, false, {
-                fileName: "src/components/masha.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/masha.js",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Masha;
-const Container = (0, _styledComponentsDefault.default).div`
-  width: 200px;
-  height: 175px;
-`;
-_c1 = Container;
-const Label = (0, _styledComponentsDefault.default).div`
-  position: absolute;
-  display: inline-block;
-  left: 120px;
-  bottom: 4px;
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 16px;
-  border: 1px solid #fff;
-  background: #333399;
-`;
-_c2 = Label;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "Masha");
-$RefreshReg$(_c1, "Container");
-$RefreshReg$(_c2, "Label");
-
-  $parcel$ReactRefreshHelpers$6d54.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../masha.png":"Db9k5","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"Db9k5":[function(require,module,exports) {
-module.exports = require("68af9b2ae96ca62d").getBundleURL("bLxZJ") + "masha.73440b4d.png" + "?" + Date.now();
-
-},{"68af9b2ae96ca62d":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
 
 },{}],"4oFvG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -32391,10 +31839,484 @@ var e = class {
     _;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i87b7":[function(require,module,exports) {
-module.exports = require("7d4a1f0bebd4ef9").getBundleURL("bLxZJ") + "bg.fca1e0fa.jpeg" + "?" + Date.now();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3Cp1c":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "GlobalStyles", ()=>GlobalStyles);
+var _styledComponents = require("styled-components");
+const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
+    html {
+        min-height: 100%;
+    }
 
-},{"7d4a1f0bebd4ef9":"lgJ39"}],"lf8Qq":[function(require,module,exports) {
+    body {
+        margin: 0;
+        height: 100%;
+        font-size: 16px;
+        line-height: 1.4;
+        font-family: Arial, sans-serif;
+        background: #000;
+    }
+
+    textarea {
+        font-family: Arial, sans-serif;
+    }
+`;
+
+},{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eVb4n":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ea8b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ea8b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Dialog", ()=>Dialog);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+var _answer = require("./answer");
+const Dialog = ({ text , answer , turnPage , buttonLabel , buttonAction , onEnd  })=>{
+    const onSubmit = (value)=>{
+        if (value === answer) turnPage();
+    };
+    const onClick = ()=>{
+        if (buttonAction) {
+            switch(buttonAction){
+                case "END":
+                    onEnd();
+            }
+            return;
+        }
+        turnPage();
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Container, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Text, {
+                children: text.map((item, key)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Phrase, {
+                        children: item
+                    }, key, false, {
+                        fileName: "src/components/dialog.js",
+                        lineNumber: 33,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/dialog.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            answer ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _answer.Answer), {
+                label: "Отправить",
+                onSubmit: onSubmit
+            }, void 0, false, {
+                fileName: "src/components/dialog.js",
+                lineNumber: 38,
+                columnNumber: 9
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Button, {
+                onClick: onClick,
+                children: buttonLabel
+            }, void 0, false, {
+                fileName: "src/components/dialog.js",
+                lineNumber: 40,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/dialog.js",
+        lineNumber: 30,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Dialog;
+const Container = (0, _styledComponentsDefault.default).div``;
+_c1 = Container;
+const Text = (0, _styledComponentsDefault.default).div`
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: -3px;
+  border-radius: 4px;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  background-color: rgba(0, 0, 0, 0.4);
+`;
+_c2 = Text;
+const Phrase = (0, _styledComponentsDefault.default).p`
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+`;
+_c3 = Phrase;
+const Button = (0, _styledComponentsDefault.default).button`
+  margin: 20px auto;
+  display: block;
+  padding: 10px 16px;
+  color: #fff;
+  background: #772cbf;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+
+  &:active {
+    background: #551e89;
+  }
+`;
+_c4 = Button;
+var _c, _c1, _c2, _c3, _c4;
+$RefreshReg$(_c, "Dialog");
+$RefreshReg$(_c1, "Container");
+$RefreshReg$(_c2, "Text");
+$RefreshReg$(_c3, "Phrase");
+$RefreshReg$(_c4, "Button");
+
+  $parcel$ReactRefreshHelpers$ea8b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","styled-components":"1U3k6","./answer":"cHXse","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cHXse":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$445c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$445c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Answer", ()=>Answer);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+var _s = $RefreshSig$();
+const Answer = ({ label , onSubmit  })=>{
+    _s();
+    const [answer, setAnswer] = (0, _react.useState)();
+    const onChange = (e)=>{
+        setAnswer(e.target.value);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Container, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Text, {
+                onChange: onChange,
+                value: answer
+            }, void 0, false, {
+                fileName: "src/components/answer.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Button, {
+                onClick: ()=>{
+                    onSubmit(answer);
+                },
+                children: label
+            }, void 0, false, {
+                fileName: "src/components/answer.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/answer.js",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Answer, "AjR2UpthymMS6uPGPahP19MYw38=");
+_c = Answer;
+const Container = (0, _styledComponentsDefault.default).div`
+  text-align: right;
+  margin: 0 auto;
+  width: 300px;
+`;
+_c1 = Container;
+const Text = (0, _styledComponentsDefault.default).textarea`
+  display: block;
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  font-size: 16px;
+  background: none;
+  border: 4px solid #772cbf;
+  border-radius: 4px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+`;
+_c2 = Text;
+const Button = (0, _styledComponentsDefault.default).button`
+  margin: 20px auto;
+  display: inline-block;
+  padding: 10px 16px;
+  color: #fff;
+  background: #772cbf;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+
+  &:active {
+    background: #551e89;
+  }
+`;
+_c3 = Button;
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "Answer");
+$RefreshReg$(_c1, "Container");
+$RefreshReg$(_c2, "Text");
+$RefreshReg$(_c3, "Button");
+
+  $parcel$ReactRefreshHelpers$445c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("9bcd37ccd6b11c6");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + " %exports% " + key);
+    }
+}
+
+},{"9bcd37ccd6b11c6":"786KC"}],"9R4UB":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6d54 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6d54.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Masha", ()=>Masha);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _mashaPng = require("../masha.png");
+var _mashaPngDefault = parcelHelpers.interopDefault(_mashaPng);
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+const Masha = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Container, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _mashaPngDefault.default),
+                width: 200
+            }, void 0, false, {
+                fileName: "src/components/masha.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Label, {
+                children: "Мария"
+            }, void 0, false, {
+                fileName: "src/components/masha.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/masha.js",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Masha;
+const Container = (0, _styledComponentsDefault.default).div`
+  width: 200px;
+  height: 175px;
+`;
+_c1 = Container;
+const Label = (0, _styledComponentsDefault.default).div`
+  position: absolute;
+  display: inline-block;
+  left: 120px;
+  bottom: 4px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  background: #333399;
+`;
+_c2 = Label;
+var _c, _c1, _c2;
+$RefreshReg$(_c, "Masha");
+$RefreshReg$(_c1, "Container");
+$RefreshReg$(_c2, "Label");
+
+  $parcel$ReactRefreshHelpers$6d54.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../masha.png":"2p13w","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2p13w":[function(require,module,exports) {
+module.exports = require("df0434a016b198bb").getBundleURL("ej6rf") + "masha.bba9d383.png" + "?" + Date.now();
+
+},{"df0434a016b198bb":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"lf8Qq":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5027 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -32491,6 +32413,92 @@ $RefreshReg$(_c3, "Caption");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@react-spring/web":"4oFvG"}]},["1xC6H","jC2qd","8lqZg"], "8lqZg", "parcelRequire6fa6")
+},{"react/jsx-dev-runtime":"iTorj","styled-components":"1U3k6","@react-spring/web":"4oFvG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hYyDX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "scenary", ()=>scenary);
+const scenary = {
+    pages: [
+        {
+            text: [
+                "- Мммммурмяу...то есть привет Юля, а точнее с днем рождения!",
+                "- Меня зовут Мария. В это трудно будет поверить, но я связываюсь с тобой из параллельной кошачьей вселенной. Эволюция пошла у нас иным путем и вид кошачьих является высшей ступенью развития. У нас есть технологии, позволяющие читать другие вселенные и даже будущее."
+            ],
+            buttonLabel: "Далее"
+        },
+        {
+            text: [
+                "- Да, понимаю твое удивление. Для нас просмотр параллельных вселенных что-то вроде реалити-шоу.",
+                "- Я пришла помочь тебе, потому что твой вредный (хоть и очень красивый) муж не хочет показывать тебе где лежит твой подарок."
+            ],
+            buttonLabel: "Далее"
+        },
+        {
+            text: [
+                "- Почему я помогаю тебе? Потому что из всех моих хозяек, ты самая добрая, отзывчивая и любящая.",
+                "- Если ты готова, нажми на кнопку и мы начнем."
+            ],
+            buttonLabel: "Начать"
+        },
+        {
+            text: [
+                "- Прежде, чем мы приступим, тебе нужно пройти протокол аутентификации. Так я пойму, что нашла твою целевую версию.",
+                "- Введи ниже час своего рождения:"
+            ],
+            answer: "13"
+        },
+        {
+            text: [
+                "- Отлично! Теперь введи пожалуйста день недели, когда ты родилась (маленькими буквами): "
+            ],
+            answer: "суббота"
+        },
+        {
+            text: [
+                "- Супер, теперь я уверена что ты - это та версия, которую я искала. Далее мне нужно настроить визуализатор альтернативных реальностей - так я смогу понять где ты находишься.",
+                "- Сейчас я запущу консоль эмуляции. Для калибровки местоположения она будет задавать вопросы, на которые тебе нужно будет ответить. Все вопросы будут касаться количественной характеристики объектов вокруг тебя. Т.е. ответом будет являться количество предметов - цифра.",
+                "- Ну что, ты готова?"
+            ],
+            buttonLabel: "Да"
+        },
+        {
+            text: [
+                "- И так, первый вопрос: ",
+                "Жарким днем и жаркой ночью",
+                "Нас спасают они очень"
+            ],
+            answer: "22"
+        },
+        {
+            text: [
+                "- Прекрасно! Следующий вопрос:",
+                "В подоконник упираются,",
+                "Белой краской покрываются"
+            ],
+            answer: "31"
+        },
+        {
+            text: [
+                "- У тебя получилось! У меня удалось подключиться. Дай немного времени, я изучу твое окружение...",
+                "- Ага, попался! Подарок находится на нижней полке твоего белого шкафа. Иди скорее забирай \uD83D\uDE3B.",
+                "- Ну что, нашла?"
+            ],
+            buttonLabel: "Да, спасибо!"
+        },
+        {
+            text: [
+                "- Рада была помочь\uD83D\uDC31 С днем рождения тебя Юля! Желаю тебе самых позитивных эмоций, самого крепкого здоровья, никогда не сдаваться и идти только вперед, чтобы все мечты воплощались в реальность!",
+                "- Ну ладно, мне пора. Мой Ромео зовет меня смотреть телешоу. Пока."
+            ],
+            buttonLabel: "Пока",
+            buttonAction: "END"
+        }
+    ]
+};
 
-//# sourceMappingURL=index.975ef6c8.js.map
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d4eHK":[function(require,module,exports) {
+module.exports = require("d990672227375ccb").getBundleURL("ej6rf") + "bg.813f38a7.jpeg" + "?" + Date.now();
+
+},{"d990672227375ccb":"lgJ39"}]},["1xC6H","aleVA","8lqZg"], "8lqZg", "parcelRequire6fa6")
+
+//# sourceMappingURL=index.616ea15e.js.map
