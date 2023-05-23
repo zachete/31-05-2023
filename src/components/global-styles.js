@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         height: 100%;
         font-size: 16px;
-        line-height: 1.2;
+        line-height: 1.4;
         font-family: Arial;
         background: #000;
     }

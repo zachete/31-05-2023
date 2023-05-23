@@ -4,7 +4,13 @@
   "description": "",
   "source": "src/index.html",
   "distDir": "docs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx parcel build src/index.html --dist-dir ./docs/ --public-url https://zachete.github.io/31-05-2023/",
+    "start": "npx parcel"
+  },
   "dependencies": {
+    "@react-spring/web": "^9.7.2",
     "abortcontroller-polyfill": "^1.7.5",
     "acorn": "^8.8.2",
     "ansi-styles": "^4.3.0",
@@ -97,6 +103,7 @@
     "srcset": "^4.0.0",
     "stable": "^0.1.8",
     "styled": "^1.0.0",
+    "styled-components": "^5.3.10",
     "supports-color": "^7.2.0",
     "svgo": "^3.0.2",
     "term-size": "^2.2.1",
@@ -109,15 +116,10 @@
     "utility-types": "^3.10.0",
     "v8-compile-cache": "^2.3.0",
     "weak-lru-cache": "^1.2.2",
-    "xxhash-wasm": "^0.4.2",
-    "styled-components": "^5.3.10"
+    "xxhash-wasm": "^0.4.2"
   },
   "devDependencies": {
     "process": "^0.11.10"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx parcel build src/index.html --dist-dir ./docs/ --public-url https://zachete.github.io/31-05-2023/"
   },
   "author": "",
   "license": "ISC"

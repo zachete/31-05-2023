@@ -11,9 +11,8 @@ export const Masha = () => {
 };
 
 const Container = styled.div`
-  position: relative;
   width: 200px;
-  margin: 0 auto;
+  height: 175px;
 `;
 
 const Label = styled.div`
