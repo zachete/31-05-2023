@@ -29208,7 +29208,7 @@ parcelHelpers.export(exports, "GlobalStyles", ()=>GlobalStyles);
 var _styledComponents = require("styled-components");
 const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
     html {
-        height: 100%;
+        min-height: 100%;
     }
 
     body {
@@ -29216,8 +29216,12 @@ const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
         height: 100%;
         font-size: 16px;
         line-height: 1.4;
-        font-family: Arial;
+        font-family: Arial, sans-serif;
         background: #000;
+    }
+
+    textarea {
+        font-family: Arial, sans-serif;
     }
 `;
 
@@ -29289,7 +29293,15 @@ const Dialog = ({ text , answer , turnPage , buttonLabel , buttonAction , onEnd 
 _c = Dialog;
 const Container = (0, _styledComponentsDefault.default).div``;
 _c1 = Container;
-const Text = (0, _styledComponentsDefault.default).div``;
+const Text = (0, _styledComponentsDefault.default).div`
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: -3px;
+  border-radius: 4px;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  background-color: rgba(0, 0, 0, 0.4);
+`;
 _c2 = Text;
 const Phrase = (0, _styledComponentsDefault.default).p``;
 _c3 = Phrase;
@@ -29386,9 +29398,10 @@ const Text = (0, _styledComponentsDefault.default).textarea`
   padding: 8px;
   font-size: 16px;
   background: none;
-  border: 3px solid #772cbf;
+  border: 4px solid #772cbf;
   border-radius: 4px;
   outline: none;
+  background-color: rgba(0, 0, 0, 0.65);
   color: #fff;
 `;
 _c2 = Text;
@@ -29610,8 +29623,8 @@ const scenary = {
         },
         {
             text: [
-                "- Прекрасно, следующий вопрос:",
-                "В подоконник упираются",
+                "- Прекрасно! Следующий вопрос:",
+                "В подоконник упираются,",
                 "Белой краской покрываются"
             ],
             answer: "31"
@@ -29620,13 +29633,13 @@ const scenary = {
             text: [
                 "- У тебя получилось! У меня удалось подключиться. Дай немного времени, я изучу твое окружение...",
                 "- Ага, попался! Подарок находится на нижней полке твоего белого шкафа. Иди скорее забирай \uD83D\uDE3B.",
-                "- Нашла?"
+                "- Ну что, нашла?"
             ],
             buttonLabel: "Да, спасибо!"
         },
         {
             text: [
-                "- Рада была помочь. С днем рождения тебя Юля! Желаю тебе самых позитивных эмоций, самого крепкого здоровья, никогда не сдаваться и идти только вперед, чтобы все мечты воплощались в реальность!",
+                "- Рада была помочь\uD83D\uDC31 С днем рождения тебя Юля! Желаю тебе самых позитивных эмоций, самого крепкого здоровья, никогда не сдаваться и идти только вперед, чтобы все мечты воплощались в реальность!",
                 "- Ну ладно, мне пора. Мой Ромео зовет меня смотреть телешоу. Пока."
             ],
             buttonLabel: "Пока",

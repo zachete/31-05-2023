@@ -45,7 +45,15 @@ export const Dialog = ({
 
 const Container = styled.div``;
 
-const Text = styled.div``;
+const Text = styled.div`
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: -3px;
+  border-radius: 4px;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  background-color: rgba(0, 0, 0, 0.4);
+`;
 
 const Phrase = styled.p``;
 

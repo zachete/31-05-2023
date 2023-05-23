@@ -37,9 +37,10 @@ const Text = styled.textarea`
   padding: 8px;
   font-size: 16px;
   background: none;
-  border: 3px solid #772cbf;
+  border: 4px solid #772cbf;
   border-radius: 4px;
   outline: none;
+  background-color: rgba(0, 0, 0, 0.65);
   color: #fff;
 `;
 

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     html {
-        height: 100%;
+        min-height: 100%;
     }
 
     body {
@@ -10,7 +10,11 @@ export const GlobalStyles = createGlobalStyle`
         height: 100%;
         font-size: 16px;
         line-height: 1.4;
-        font-family: Arial;
+        font-family: Arial, sans-serif;
         background: #000;
+    }
+
+    textarea {
+        font-family: Arial, sans-serif;
     }
 `;
