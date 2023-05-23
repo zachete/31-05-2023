@@ -1,11 +1,29 @@
 import styled from 'styled-components';
 import { Answer } from './answer';
 
-export const Dialog = ({ text, answer, turnPage, buttonLabel }) => {
+export const Dialog = ({
+  text,
+  answer,
+  turnPage,
+  buttonLabel,
+  buttonAction,
+  onEnd,
+}) => {
   const onSubmit = (value) => {
     if (value === answer) {
       turnPage();
     }
+  };
+  const onClick = () => {
+    if (buttonAction) {
+      switch (buttonAction) {
+        case 'END':
+          onEnd();
+      }
+      return;
+    }
+
+    turnPage();
   };
 
   return (
@@ -19,7 +37,7 @@ export const Dialog = ({ text, answer, turnPage, buttonLabel }) => {
       {answer ? (
         <Answer label={'Отправить'} onSubmit={onSubmit} />
       ) : (
-        <Button onClick={turnPage}>{buttonLabel}</Button>
+        <Button onClick={onClick}>{buttonLabel}</Button>
       )}
     </Container>
   );

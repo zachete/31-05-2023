@@ -1,58 +1,81 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { useSpring, animated } from '@react-spring/web';
+import { useSpring, animated, config } from '@react-spring/web';
 import { GlobalStyles } from './global-styles';
 import { Dialog } from './dialog';
 import { Masha } from './masha';
+import { Credits } from './credits';
 import { scenary } from '../scenary';
 import bgImage from '../bg.jpeg';
 
 export const App = () => {
   const [activePage, setActivePage] = useState(0);
+  const [end, setEnd] = useState(false);
+  const mashaSprings = useSpring({
+    from: { x: end ? 80 : 600 },
+    to: { x: end ? -600 : 80 },
+    delay: 1200,
+  });
+  const dialogSprings = useSpring({
+    from: { x: end ? 0 : 600 },
+    to: { x: end ? -600 : 0 },
+    delay: 1700,
+  });
+  const [historySprings, historySpringsApi] = useSpring(() => ({}));
   const onNext = (pageNumber) => {
     setActivePage(pageNumber);
   };
-  const mashaSprings = useSpring({
-    from: { x: 500 },
-    to: { x: 80 },
-    delay: 4000,
-  });
-  const dialogSprings = useSpring({
-    from: { x: 500 },
-    to: { x: 0 },
-    delay: 5500,
-  });
+  const onEnd = () => {
+    setEnd(true);
+    historySpringsApi.start({
+      from: {
+        opacity: 1,
+      },
+      to: {
+        backgroundColor: '#000',
+        opacity: 0.5,
+      },
+      delay: 1800,
+      config: config.slow,
+    });
+  };
 
   return (
     <>
       <GlobalStyles />
-      <History>
-        <Page>
-          <MashaContainer>
-            <animated.div style={{ ...mashaSprings }}>
-              <Masha />
-            </animated.div>
-          </MashaContainer>
 
-          {scenary.pages.map(
-            (item, key) =>
-              activePage === key && (
-                <animated.div style={{ ...dialogSprings }}>
-                  <Dialog
-                    key={key}
-                    active={activePage === key}
-                    buttonLabel={item.buttonLabel}
-                    turnPage={() => setActivePage(key + 1)}
-                    text={item.text}
-                    answer={item.answer}
-                    action
-                    onNext={onNext}
-                  />
-                </animated.div>
-              )
-          )}
-        </Page>
-      </History>
+      <animated.div style={{ ...historySprings }}>
+        <History>
+          <Page>
+            <MashaContainer>
+              <animated.div style={{ ...mashaSprings }}>
+                <Masha />
+              </animated.div>
+            </MashaContainer>
+
+            {scenary.pages.map(
+              (item, key) =>
+                activePage === key && (
+                  <animated.div style={{ ...dialogSprings }}>
+                    <Dialog
+                      key={key}
+                      active={activePage === key}
+                      buttonLabel={item.buttonLabel}
+                      buttonAction={item.buttonAction}
+                      text={item.text}
+                      answer={item.answer}
+                      onNext={onNext}
+                      onEnd={onEnd}
+                      turnPage={() => setActivePage(key + 1)}
+                    />
+                  </animated.div>
+                )
+            )}
+          </Page>
+        </History>
+      </animated.div>
+
+      {end && <Credits />}
     </>
   );
 };
