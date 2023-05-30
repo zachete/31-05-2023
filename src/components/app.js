@@ -14,12 +14,12 @@ export const App = () => {
   const mashaSprings = useSpring({
     from: { x: end ? 80 : 600 },
     to: { x: end ? -600 : 80 },
-    delay: 1200,
+    delay: 3200,
   });
   const dialogSprings = useSpring({
     from: { x: end ? 0 : 600 },
     to: { x: end ? -600 : 0 },
-    delay: 1700,
+    delay: 3700,
   });
   const [historySprings, historySpringsApi] = useSpring(() => ({}));
   const onNext = (pageNumber) => {
